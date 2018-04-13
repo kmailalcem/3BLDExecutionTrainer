@@ -23,7 +23,7 @@ int cLetter::state = 0;
 eLetter::eLetter(int i): repr(i) {}
 
 eLetter::eLetter(char c){
-    for(int i = 0; i < conversion_chart.size(); i++) {
+    for(int i = 0; i < (int)conversion_chart.size(); i++) {
         if(conversion_chart[i] == c){
             repr = i;
             return;
