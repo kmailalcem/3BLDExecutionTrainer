@@ -2,8 +2,8 @@
 //  Cube.cpp
 //  BldMemoGenerator
 //
-//  Created by Nelson Zhang on 12/9/16.
-//  Copyright © 2016 Nelson Zhang. All rights reserved.
+//  Created by Xuzhi Zhang on 12/9/16.
+//  Copyright © 2016 Xuzhi Zhang. All rights reserved.
 //
 
 #include "Cube.h"
@@ -124,7 +124,7 @@ void Cube::edge_four_cycle(const std::vector<int> related_edges, int direction) 
     }
     else if (direction == -1) {
         int temp = edges[related_edges[3]];
-        for(int i = 3; i >= 0; i--)
+        for(int i = 3; i > 0; i--)
             edges[related_edges[i]] = edges[related_edges[i - 1]];
         edges[related_edges[0]] = temp;
     }
@@ -143,7 +143,7 @@ void Cube::corner_four_cycle(const std::vector<int> related_edges, int direction
     }
     else if (direction == -1) {
         int temp = corners[related_edges[3]];
-        for(int i = 3; i >= 0; i--)
+        for(int i = 3; i > 0; i--)
             corners[related_edges[i]] = corners[related_edges[i - 1]];
         corners[related_edges[0]] = temp;
     }
@@ -365,14 +365,15 @@ void Cube::generate_corner_memo(){
 }
 
 void Cube::show_cube(std::ostream& os) {
+    os << "let correctEdge = [";
     for(int i = 0; i < NUM_STICKERS; i++) {
-        os << edges[i] << " ";
+        os << edges[i] << ((i == NUM_STICKERS - 1)? "" : ", ");
     }
-    os << std::endl;
+    os << "]" << std::endl << "let correctCorner = [";
     for(int i = 0; i < NUM_STICKERS; i++) {
-        os << corners[i] << " ";
+        os << corners[i] << ((i == NUM_STICKERS - 1)? "" : ", ");
     }
-    os << std::endl;
+    os << "]" << std::endl;
 }
 
 void Cube::solve() {
