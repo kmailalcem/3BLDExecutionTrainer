@@ -1,6 +1,11 @@
 # 3BLD Execution Trainer
 This program is a simple C++ program that randomly generates scrambles, provide memo and timing. The letter scheme used here is traditional (mofangba) letter scheme.
 
+# Note
+This project is outdated. The source code organization wasn't the greatest, it's hard to use, and doesn't provide much functionality. 
+
+This project was originally used for my own blindfolded training, and is the inspiration for the much for powerful GUI (iOS) application [xzTrainer](https://github.com/kmailalcem/xzTrainer).
+
 # Installation
 This installation assumes that you have GCC installed. Open up terminal and change directory to the folder you intend to install
 
