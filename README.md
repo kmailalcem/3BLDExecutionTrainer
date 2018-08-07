@@ -48,7 +48,7 @@ scramble3
 
 and the results will be output to the terminal. Bare in mind that all letters are in traditional (mofangba) letter scheme.
 
-** Maintenance
+## Maintenance
 Due to the technical background required and the limited functionality this program provides, this project is clearly not within expectation of most cubers looking for such a software.
 For this reason, this project is no longer maintained.
-For a much more powerful tool for generating memo, see [xzTrainer](https://github.com/kmailalcem/xzTrainer).
+For a much more powerful tool on generating memo, see [xzTrainer](https://github.com/kmailalcem/xzTrainer).
